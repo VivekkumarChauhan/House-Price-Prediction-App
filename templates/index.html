@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form id="prediction-form">
+            <input type="number" id="area" placeholder="Area (in sq. ft)" required>
+            <input type="number" id="bedrooms" placeholder="Number of Bedrooms" required>
+            <input type="number" id="bathrooms" placeholder="Number of Bathrooms" required>
+            <input type="number" id="floors" placeholder="Number of Floors" required>
+            <input type="number" id="age" placeholder="Age of House (in years)" required>
+            <button type="submit" class="btn">Predict Price</button>
+        </form>
+        <div class="loading-spinner" id="loader" style="display:none;">Loading...</div>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#prediction-form').on('submit', function(event) {
+                event.preventDefault();
+                $('#loader').show(); // Show loading spinner
+
+                const formData = {
+                    area: $('#area').val(),
+                    bedrooms: $('#bedrooms').val(),
+                    bathrooms: $('#bathrooms').val(),
+                    floors: $('#floors').val(),
+                    age: $('#age').val(),
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/predict',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function(response) {
+                        $('#loader').hide(); // Hide loading spinner
+                        $('#result').text(`Predicted House Price: $${response.price.toFixed(2)}`).addClass('show'); // Show result
+                    },
+                    error: function(error) {
+                        $('#loader').hide(); // Hide loading spinner
+                        $('#result').text('Error predicting price. Please try again.').addClass('error');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
