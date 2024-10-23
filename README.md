@@ -83,3 +83,5 @@ The application will start on http://127.0.0.1:5000/.
 ## Usage
 1.**Enter the area, number of bedrooms, bathrooms, floors, and age of the house in the input fields.**
 2.**Click on "Predict Price" to get the estimated price of the house.**
+
+## copyright Vivekkumar 2024
