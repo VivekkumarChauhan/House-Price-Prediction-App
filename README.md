@@ -79,6 +79,28 @@ The application will start on http://127.0.0.1:5000/.
 
 6.**Access the Web Interface Open your web browser and navigate to http://127.0.0.1:5000/. You can now input flower measurements and classify them using the KNN or Logistic Regression models.**
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+
+## Contributing
+
+We welcome contributions to enhance **SentimentInsight**! If you're interested in contributing, please follow these steps:
+
+1. **Fork the repository**.
+2. **Create a new branch**:
+   ```bash
+   git checkout -b feature-branch
+3. **Commit your changes**:
+   ```bash
+   git commit -m 'Add feature'
+   ```
+4. **Push to the branch**:
+   ```bash
+    git push origin feature-branch
+   ```
+5. **Open a Pull Request**.
+
 
 ## Usage
 1.**Enter the area, number of bedrooms, bathrooms, floors, and age of the house in the input fields.**
