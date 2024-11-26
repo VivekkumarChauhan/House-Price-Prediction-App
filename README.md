@@ -7,7 +7,7 @@
    - The project utilizes a dataset containing various house features to predict the price of a house.
    - It employs a machine learning model, specifically Linear Regression, to provide predictions based on user input.
    - Users can input house characteristics, and the application returns the estimated price.
-     
+   - 
 2. **Technology Stack**
    - **Frontend:** HTML, CSS, JavaScript
    - **Backend:** Flask (Python)
