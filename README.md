@@ -33,6 +33,9 @@ House-Price-Prediction/
 │
 └── templates/                                   # Directory for HTML templates
         └── index.html                          # Main HTML file for the web interface
+
+
+
 ```
 
 ## Installation Guide
