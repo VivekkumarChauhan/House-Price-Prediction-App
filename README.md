@@ -13,7 +13,7 @@
    - **Backend:** Flask (Python)
    - **Machine Learning:** Scikit-learn
    - **Data Storage:** Pickle (for model persistence)
-   - hshs
+   
 
 ## Project Structure
 
